@@ -1,0 +1,95 @@
+<h1>Store view for all the data in the api</h1>
+
+<div class="container">
+<div class="content">
+    <div class="content-header">
+        <h4 id="users-header">Users</h4>
+    </div>
+    <div class="content-body">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Names</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                <tr>
+                    <th scope="row">{{@key}}</th>
+                    <td>{{this.name.first}} {{this.name.last}} </td>
+                    <td>{{this.username}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="content">
+    <div class="content-header">
+        <h4 id="products-header">Products</h4>
+    </div>
+    <div class="content-body">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                <tr>
+                    <th scope="row">{{@key}}</th>
+                    <td>{{this.name.productName}} </td>
+                    <td>{{this.company}}</td>
+                    <td>{{this.category}}</td>
+                    <td>{{this.quantity}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="content">
+    <div class="content-header">
+        <h4 id="reviews-header">Users</h4>
+    </div>
+    <div class="content-body">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">review</th>
+                    <th scope="col">username</th>
+                    <th scope="col">like</th>
+                    <th scope="col">dislike</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each reviews}}
+                <tr>
+                    <th scope="row">{{@key}}</th>
+                    <td>{{this.name.title}} </td>
+                    <td>{{this.review}}</td>
+                    <td>{{this.username}}</td>
+                    <td>{{this.like}}</td>
+                    <td>{{this.dislike}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
