@@ -15,6 +15,7 @@ const company = require('../services/Company')
 // Store page 
 router.get('/', (req, res) => {
 
+    // shorting the list
     const Users = users.slice(0, 3)
     const Products = products.slice(0, 3)
     const Comments = comments.slice(0, 3)
